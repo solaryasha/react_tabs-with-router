@@ -1,6 +1,8 @@
 import React from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
 
 import './App.css';
+import { Home } from './components/Home/Home';
 
 // const tabs = [
 //   { id: 'tab-1', title: 'Tab 1', content: 'Some text 1' },
@@ -9,9 +11,10 @@ import './App.css';
 // ];
 
 const App = () => (
-  <div className="App">
-    <h1>Tabs with router</h1>
-  </div>
+  <BrowserRouter>
+    <Route path="/" component={Home} />
+    <Route path="/tabs" component={Tabs} />
+  </BrowserRouter>
 );
 
 export default App;
